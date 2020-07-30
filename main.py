@@ -42,16 +42,16 @@ class Mp3Panel(wx.Panel):
         mp3_objects = []
         index = 0
         for mp3 in mp3s:
-           mp3_object = eyed3.load(mp3)
-           self.list_ctrl.InsertItem(index, 
+            mp3_object = eyed3.load(mp3)
+            self.list_ctrl.InsertItem(index, 
                 mp3_object.tag.artist)
-           self.list_ctrl.SetItem(index, 1, 
+            self.list_ctrl.SetItem(index, 1, 
                 mp3_object.tag.album)
-           self.list_ctrl.SetItem(index, 2, 
+            self.list_ctrl.SetItem(index, 2, 
                 mp3_object.tag.title)
-           mp3_objects.append(mp3_object)
-           self.row_obj_dict[index] = mp3_object
-           index += 1
+            mp3_objects.append(mp3_object)
+            self.row_obj_dict[index] = mp3_object
+            index += 1
 
 class EditDialog(wx.Dialog):    
     def __init__(self, mp3):
